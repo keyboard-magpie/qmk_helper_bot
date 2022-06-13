@@ -6,7 +6,7 @@ const helpmessage =  [
   },
   {
     name: "**FAQs**",
-    value: "faq, faq-build, faq-debug, faq-keymap, squeeze-avr, glossary"
+    value: "faq, faq-build, faq-debug, faq-keymap, squeeze-avr, glossary, clear-eeprom"
   },
   {
     name: "**Building, Flashing, Drivers**",
@@ -147,6 +147,7 @@ module.exports = {
     "syncoptions": "feature_split_keyboard?id=data-sync-options",
     "intercepttaps": "mod_tap?id=intercepting-mod-taps",
     "udev": "faq_build?id=linux-udev-rules",
+    "cleareeprom": "faq_keymap?id=my-keymap-doesnt-update-when-i-flash-it"
   })[docs],
 
   // Format embedded message
