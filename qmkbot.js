@@ -7,7 +7,7 @@ require('dotenv').config();
 const token = process.env.TOKEN;
 
 // Import utils.js
-const {prefix, baseurl, msg, docsSwitch, authroles, parse, bare, firmware, toolbox, plainhelp, disclaimer, ohshitgit, git, xkcd, promicro, protonc, elitec, blackpill, bluepill, msys, coc, kbdfans, lighting, wsl, vid, vidq, automark, markdown, checkrole, sonixinvite, sonix, openrgbinvite, openrgb, vialinvite, vial, iconfrominvite, inputlanguage, standards, snip, zmk, zmkinvite, prstatus} = require('./utils.js');
+const {prefix, baseurl, msg, docsSwitch, authroles, parse, bare, firmware, toolbox, plainhelp, disclaimer, ohshitgit, git, xkcd, promicro, protonc, elitec, blackpill, bluepill, msys, coc, kbdfans, lighting, wsl, vid, vidq, automark, markdown, checkrole, sonixinvite, sonix, openrgbinvite, openrgb, vialinvite, vial, iconfrominvite, inputlanguage, standards, snip, zmk, zmkinvite, prstatus, volunteers} = require('./utils.js');
 let cooldown = require("./utils.js").cooldown;
 
 bot.on('ready', () => {
@@ -305,8 +305,13 @@ bot.on('message', message => {
 
       case 'prstatus': // where is your PR?
         cmdmsg.addFields({name: 'When will my pull request be merged?\n', value: prstatus});
-	channel.send(cmdmsg);
-	break;
+        channel.send(cmdmsg);
+        break;
+
+      case 'volunteers': // where is your PR?
+        cmdmsg.addFields({name: 'QMK is an open-source project run by volunteers.\n', value: volunteers});
+        channel.send(cmdmsg);
+        break;
 
       case 'snip':  // send xkcd standards
         //channel.send(snip);
