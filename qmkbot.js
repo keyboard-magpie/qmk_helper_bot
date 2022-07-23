@@ -7,7 +7,7 @@ require('dotenv').config();
 const token = process.env.TOKEN;
 
 // Import utils.js
-const {prefix, baseurl, msg, docsSwitch, authroles, parse, bare, firmware, toolbox, plainhelp, disclaimer, ohshitgit, git, xkcd, promicro, protonc, elitec, blackpill, bluepill, msys, coc, kbdfans, lighting, wsl, vid, vidq, automark, markdown, checkrole, sonixinvite, sonix, openrgbinvite, openrgb, vialinvite, vial, iconfrominvite, inputlanguage, standards, snip, zmk, zmkinvite, prstatus, volunteers} = require('./utils.js');
+const {prefix, baseurl, msg, docsSwitch, authroles, parse, bare, firmware, toolbox, plainhelp, disclaimer, ohshitgit, git, xkcd, promicro, protonc, elitec, blackpill, bluepill, msys, coc, kbdfans, keychron, lighting, wsl, vid, vidq, automark, markdown, checkrole, sonixinvite, sonix, openrgbinvite, openrgb, vialinvite, vial, iconfrominvite, inputlanguage, standards, snip, zmk, zmkinvite, prstatus, volunteers} = require('./utils.js');
 let cooldown = require("./utils.js").cooldown;
 
 bot.on('ready', () => {
@@ -140,6 +140,11 @@ bot.on('message', message => {
         cmdmsg.addFields({name: 'Dear KBDFans users:', value: kbdfans});
         channel.send(cmdmsg);
         break;
+      
+      case 'keychron':
+	cmdmsg.addFields({name: 'Dear Keychron users:', value: keychron});
+	channel.send(cmdmsg);
+		    
       case 'sonix':
         // channel.send('Sonix:\n' + sonix + bare(sonixinvite));
         iconfrominvite(bot, sonixinvite)
