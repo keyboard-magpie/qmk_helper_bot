@@ -141,9 +141,10 @@ bot.on('message', message => {
         channel.send(cmdmsg);
         break;
       
-      case 'keychron':
+      case 'keychron':    
 	cmdmsg.addFields({name: 'Dear Keychron users:', value: keychron});
 	channel.send(cmdmsg);
+	break;
 		    
       case 'sonix':
         // channel.send('Sonix:\n' + sonix + bare(sonixinvite));
